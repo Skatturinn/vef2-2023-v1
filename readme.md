@@ -17,7 +17,9 @@ Skrifa skal allan kóða, ekki skal nota forritasöfn frá t.d. NPM.
 
 ### Lestur gagna
 
-Undir möppunni `data/` eru CSV skrár með áföngum í, ásamt stakri JSON skrá (`index.json`) með heiti deildar, lýsingu og heiti skráar sem inniheldur áfanga.
+Undir möppunni `data/` eru CSV skrár með áföngum í, 
+ásamt stakri JSON skrá (`index.json`) með heiti deildar, 
+lýsingu og heiti skráar sem inniheldur áfanga.
 
 Hver CSV skrá byrjar á línu með dálkaheitum:
 
