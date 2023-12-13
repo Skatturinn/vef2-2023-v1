@@ -1,0 +1,43 @@
+{
+  "type": "module",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "lint": "stylelint \"./**/*.css\" --fix & eslint \"./**/*.js\" --fix",
+    "sass": "sass styles.scss styles.css -w",
+    "dev": "concurrently npm:sass npm:browser-sync",
+    "prettier": "prettier --write .",
+    "copy:html": "cpy ./*.html ./build/",
+    "copy:jslib": "cpy ./lib/*.js ./build/",
+    "copy:js": "cpy ./scripts.js ./build/",
+    "copy:css": "cpy ./styles.css ./build/",
+    "build": "concurrently npm:copy:*",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --collectCoverageFrom=\"./lib/**/*.js\""
+  },
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2",
+    "cpy-cli": "^5.0.0",
+    "eslint": "^8.55.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.1",
+    "stylelint": "^16.0.1",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard": "^35.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "name": "vef2-2023-v1",
+  "description": "Verkefni 1/4 í vef 2 2023",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "",
+  "license": "ISC"
+}
