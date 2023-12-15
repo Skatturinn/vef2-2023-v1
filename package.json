@@ -10,9 +10,9 @@
     "copy:html": "cpy ./*.html ./build/",
     "copy:jslib": "cpy ./lib/*.js ./build/",
     "copy:js": "cpy ./scripts.js ./dist/",
-    "copy:css": "cpy ./styles.css ./build/",
+    "copy:css": "cpy ./styles.css ./dist/",
     "buildgamla": "concurrently npm:copy:*",
-    "build": "concurrently npm:dist",
+    "build": "concurrently npm:dist npm:copy:*",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --collectCoverageFrom=\"./lib/**/*.js\""
   },
   "dependencies": {
