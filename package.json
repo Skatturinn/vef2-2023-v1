@@ -7,8 +7,6 @@
     "dev": "concurrently npm:sass npm:browser-sync",
     "dist": "node ./lib/build.js",
     "prettier": "prettier --write .",
-    "copy:html": "cpy ./*.html ./build/",
-    "copy:jslib": "cpy ./lib/*.js ./build/",
     "copy:js": "cpy ./scripts.js ./dist/",
     "copy:css": "cpy ./styles.css ./dist/",
     "buildgamla": "concurrently npm:copy:*",
