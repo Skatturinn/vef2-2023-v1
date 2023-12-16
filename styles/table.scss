@@ -112,10 +112,14 @@ table {
 		& .row {
 			& :nth-child(odd) {
 				grid-column-end: span 4;
+				justify-self: center;
+				text-align: center;
 			}
 
 			& :nth-child(even) {
 				grid-column-end: span 8;
+				justify-self: center;
+				text-align: center;
 			}
 		}
 	}
