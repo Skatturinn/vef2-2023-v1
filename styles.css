@@ -147,6 +147,11 @@ table {
   grid-column-end: span 2;
 }
 
+.td a {
+  text-decoration-style: solid;
+  text-decoration: underline;
+}
+
 @media (min-width: 316px) and (max-width: 800px) {
   .tafla {
     gap: 1.5em;

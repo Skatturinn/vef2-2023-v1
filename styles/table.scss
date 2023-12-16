@@ -67,6 +67,14 @@ table {
 		& :nth-child(5) {
 			grid-column-end: span 2;
 		}
+
+	}
+}
+
+.td {
+	& a {
+		text-decoration-style: solid;
+		text-decoration: underline;
 	}
 }
 
