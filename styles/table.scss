@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 footer {
 	width: 80%;
 	margin: 0 auto;
@@ -17,7 +19,7 @@ footer {
 
 table {
 	overflow-x: scroll;
-	min-width: 800px;
+	// min-width: 500px + 16px;
 	max-width: $maxw;
 	margin: 0 auto;
 	padding: 0 1em;
@@ -49,22 +51,72 @@ table {
 		}
 
 		& :nth-child(2) {
-			grid-column-end: span 4;
+			grid-column-end: span 3;
 		}
 
 		& :nth-child(3) {
+			grid-column-end: span 1;
 			justify-self: center;
 		}
 
 		& :nth-child(4) {
+			grid-column-end: span 2;
 			justify-self: center;
 		}
 
 		& :nth-child(5) {
 			grid-column-end: span 2;
 		}
+	}
+}
 
+@media (min-width: 316px) and (max-width: 800px) {
+	.tafla {
+		gap: 1.5em;
 
-		& td {}
+		& .row {
+
+			& :first-child {
+				grid-column-end: span 3;
+			}
+
+			& :last-child {
+				grid-column-end: span 3;
+			}
+
+			& :nth-child(2) {
+				grid-column-end: span 6;
+			}
+
+			& :nth-child(3) {
+				grid-column-end: span 3;
+				// justify-self: center;
+			}
+
+			& :nth-child(4) {
+				grid-column-end: span 3;
+				// justify-self: center;
+			}
+
+			& :nth-child(5) {
+				grid-column-end: span 6;
+			}
+		}
+	}
+}
+
+@media (min-width: 0) and (max-width: 316px) {
+	.tafla {
+		gap: 1.5em;
+
+		& .row {
+			& :nth-child(odd) {
+				grid-column-end: span 4;
+			}
+
+			& :nth-child(even) {
+				grid-column-end: span 8;
+			}
+		}
 	}
 }
