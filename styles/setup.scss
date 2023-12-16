@@ -4,7 +4,7 @@ $minw: 500px;
 $bc: #0c1438;
 $wc: #f6f5f3;
 $ff1: 'Didot', serif;
-$lc: #351E10;
+$lc: #351e10;
 
 * {
 	box-sizing: border-box;
@@ -13,19 +13,19 @@ $lc: #351E10;
 }
 
 html {
-	overflow-wrap: anywhere;
 	color: $bc;
+	overflow-wrap: anywhere;
 }
 
 body {
-	font-family: $ff1;
 	background-color: $wc;
+	font-family: $ff1;
 }
 
 main {
 
-	& section,
-	& div {
+	section,
+	div {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: $maxw;

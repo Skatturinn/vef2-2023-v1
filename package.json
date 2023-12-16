@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "browser-sync": "browser-sync start --serveStatic ./dist --server --files ./dist/*.css ./dist/*.html",
-    "lint": "stylelint \"./**/*.css\" --fix & eslint \"./**/*.js\" --fix",
+    "lint": "stylelint \"./styles/*.scss\" --fix & eslint \"./**/*.js\" --fix",
     "sass": "sass styles.scss styles.css -w",
     "dist": "node ./lib/build.js",
     "prettier": "prettier --write .",
@@ -27,8 +27,8 @@
     "jest": "^29.7.0",
     "prettier": "^3.1.1",
     "sass": "^1.69.5",
-    "stylelint": "^16.0.2",
-    "stylelint-config-standard": "^35.0.0"
+    "stylelint": "^14.13.0",
+    "stylelint-config-sass-guidelines": "^9.0.1"
   },
   "devDependencies": {
     "copy-and-watch": "^0.1.6",
