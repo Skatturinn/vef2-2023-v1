@@ -1,0 +1,70 @@
+footer {
+	width: 80%;
+	margin: 0 auto;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 0 1em;
+}
+
+.tbaka {
+	border: 0;
+	border-bottom: 1px solid $bc;
+	padding: 0.15em 1em -0.25em;
+	max-width: 10%;
+}
+
+table {
+	overflow-x: scroll;
+	min-width: 800px;
+	max-width: $maxw;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+.tafla {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: minmax(0, 1fr);
+	gap: 1em;
+	margin: 0 0 1em;
+	padding: 0.5em 0 1em;
+	border-bottom: 1px solid $bc;
+	overflow-wrap: break-word;
+
+	& .row {
+		display: grid;
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		word-break: break-word;
+
+		& :first-child {
+			grid-column-end: span 2;
+			justify-self: center;
+		}
+
+		& :last-child {
+			grid-column-end: span 2;
+			justify-self: center;
+		}
+
+		& :nth-child(2) {
+			grid-column-end: span 4;
+		}
+
+		& :nth-child(3) {
+			justify-self: center;
+		}
+
+		& :nth-child(4) {
+			justify-self: center;
+		}
+
+		& :nth-child(5) {
+			grid-column-end: span 2;
+		}
+
+
+		& td {}
+	}
+}

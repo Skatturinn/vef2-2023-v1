@@ -1,0 +1,42 @@
+@use 'sass:math';
+$maxw: 1440px;
+$minw: 500px;
+$bc: #0c1438;
+$wc: #f6f5f3;
+$ff1: 'Didot', serif;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-wrap: anywhere;
+	color: $bc;
+}
+
+body {
+	font-family: $ff1;
+	background-color: $wc;
+}
+
+main {
+
+	& section,
+	& div {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $maxw;
+	}
+}
+
+.sr-only:not(:focus, :active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: var(--border-size);
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: var(--border-size);
+}

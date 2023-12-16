@@ -1,15 +1,17 @@
 {
   "type": "module",
   "scripts": {
-    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "browser-sync": "browser-sync start --serveStatic ./dist --server --files ./dist/*.css ./dist/*.html",
     "lint": "stylelint \"./**/*.css\" --fix & eslint \"./**/*.js\" --fix",
     "sass": "sass styles.scss styles.css -w",
-    "dev": "concurrently npm:sass npm:browser-sync",
     "dist": "node ./lib/build.js",
     "prettier": "prettier --write .",
+    "cw": "copy-and-watch --watch ./styles.css ./dist/",
+    "cw2": "copy-and-watch --watch ./scripts.js ./dist/",
     "copy:js": "cpy ./scripts.js ./dist/",
     "copy:css": "cpy ./styles.css ./dist/",
     "buildgamla": "concurrently npm:copy:*",
+    "dev": "concurrently npm:sass npm:cw npm:browser-sync npm:cw2",
     "build": "concurrently npm:dist npm:copy:*",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --collectCoverageFrom=\"./lib/**/*.js\""
   },
@@ -24,10 +26,12 @@
     "eslint-plugin-import": "^2.29.0",
     "jest": "^29.7.0",
     "prettier": "^3.1.1",
+    "sass": "^1.69.5",
     "stylelint": "^16.0.2",
     "stylelint-config-standard": "^35.0.0"
   },
   "devDependencies": {
+    "copy-and-watch": "^0.1.6",
     "jest": "^29.7.0"
   },
   "name": "vef2-2023-v1",
