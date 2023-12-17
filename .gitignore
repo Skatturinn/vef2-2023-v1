@@ -12,5 +12,6 @@
 # production
 /build
 /dist
+/src
 
 

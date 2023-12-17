@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "browser-sync": "browser-sync start --serveStatic ./dist --server --files ./dist/*.css ./dist/*.html",
+    "browser-sync": "browser-sync start --serveStatic ./dist --server --files ./dist/*.js ./dist/*.css ./dist/*.html",
     "lint": "stylelint \"./styles/*.scss\" --fix & eslint \"./**/*.js\" --fix",
     "sass": "sass styles.scss styles.css -w",
     "dist": "node ./lib/build.js",

@@ -10,6 +10,7 @@ $lc: #351e10;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	grid-ro
 }
 
 html {
@@ -17,8 +18,10 @@ html {
 	overflow-wrap: anywhere;
 }
 
-body {
+body,
+button {
 	background-color: $wc;
+	color: $bc;
 	font-family: $ff1;
 }
 

@@ -1,133 +1,145 @@
 @use 'sass:math';
 
 footer {
-	align-items: center;
-	justify-content: center;
-	justify-items: center;
-	margin: 0 auto;
-	padding: 0 0 1em;
-	text-align: center;
-	width: 80%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  padding: 0 0 1em;
+  text-align: center;
+  width: 80%;
 }
 
 .tbaka {
-	border: 0;
-	border-bottom: 1px solid $bc;
-	max-width: 10%;
-	padding: 0.15em 1em -0.25em;
+  border: 0;
+  border-bottom: 1px solid $bc;
+  max-width: 10%;
+  padding: 0.15em 1em -0.25em;
 }
 
 table {
-	margin: 0 auto;
-	// min-width: 500px + 16px;
-	max-width: $maxw;
-	overflow-x: scroll;
-	padding: 0 1em;
+  margin: 0 auto;
+  // min-width: 500px + 16px;
+  max-width: $maxw;
+  overflow-x: scroll;
+  padding: 0 1em;
+}
+
+button {
+  border: 0;
+  border-bottom: 1px $bc solid;
+  border-radius: 1em;
+  border-top: 1px $bc solid;
+  padding: 0.25em 0.5em;
+
+  :hover {
+    cursor: pointer;
+  }
 }
 
 .tafla {
-	border-bottom: 1px solid $bc;
-	display: grid;
-	gap: 1em;
-	grid-template-columns: minmax(0, 1fr);
-	grid-template-rows: minmax(0, 1fr);
-	margin: 0 0 1em;
-	overflow-wrap: break-word;
-	padding: 0.5em 0 1em;
+  border-bottom: 1px solid $bc;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  margin: 0 0 1em;
+  overflow-wrap: break-word;
+  padding: 0.5em 0 1em;
 }
 
 .row {
-	display: grid;
-	grid-template-columns: repeat(12, minmax(0, 1fr));
-	word-break: break-word;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  word-break: break-word;
 
-	:first-child {
-		grid-column-end: span 2;
-		justify-self: center;
-	}
+  :first-child {
+    grid-column-end: span 2;
+    justify-self: center;
+  }
 
-	:last-child {
-		grid-column-end: span 2;
-		justify-self: center;
-	}
+  :last-child {
+    grid-column-end: span 2;
+    justify-self: center;
+  }
 
-	:nth-child(2) {
-		grid-column-end: span 3;
-	}
+  :nth-child(2) {
+    grid-column-end: span 3;
+  }
 
-	:nth-child(3) {
-		grid-column-end: span 1;
-		justify-self: center;
-	}
+  :nth-child(3) {
+    grid-column-end: span 1;
+    justify-self: center;
+  }
 
-	:nth-child(4) {
-		grid-column-end: span 2;
-		justify-self: center;
-	}
+  :nth-child(4) {
+    grid-column-end: span 2;
+    justify-self: center;
+  }
 
-	:nth-child(5) {
-		grid-column-end: span 2;
-	}
+  :nth-child(5) {
+    grid-column-end: span 2;
+  }
 
 }
 
 .td {
-	a {
-		text-decoration: underline;
-		text-decoration-style: solid;
-	}
+  a {
+    text-decoration: underline;
+    text-decoration-style: solid;
+  }
 }
 
 @media (min-width: 316px) and (max-width: 800px) {
-	.tafla {
-		gap: 1.5em;
-	}
+  .tafla {
+    gap: 1.5em;
+  }
 
-	.row {
-		:first-child {
-			grid-column-end: span 3;
-		}
+  .row {
+    :first-child {
+      grid-column-end: span 3;
+    }
 
-		:last-child {
-			grid-column-end: span 3;
-		}
+    :last-child {
+      grid-column-end: span 3;
+    }
 
-		:nth-child(2) {
-			grid-column-end: span 6;
-		}
+    :nth-child(2) {
+      grid-column-end: span 6;
+    }
 
-		:nth-child(3) {
-			grid-column-end: span 3;
-			// justify-self: center;
-		}
+    :nth-child(3) {
+      grid-column-end: span 3;
+      // justify-self: center;
+    }
 
-		:nth-child(4) {
-			grid-column-end: span 3;
-			// justify-self: center;
-		}
+    :nth-child(4) {
+      grid-column-end: span 3;
+      // justify-self: center;
+    }
 
-		:nth-child(5) {
-			grid-column-end: span 6;
-		}
-	}
+    :nth-child(5) {
+      grid-column-end: span 6;
+    }
+  }
 }
 
 @media (min-width: 0) and (max-width: 316px) {
-	.tafla {
-		gap: 1.5em;
-	}
+  .tafla {
+    gap: 1.5em;
+  }
 
-	.row {
-		:nth-child(odd) {
-			grid-column-end: span 4;
-			justify-self: center;
-			text-align: center;
-		}
+  .row {
+    :nth-child(odd) {
+      grid-column-end: span 4;
+      justify-self: center;
+      text-align: center;
+    }
 
-		:nth-child(even) {
-			grid-column-end: span 8;
-			justify-self: center;
-			text-align: center;
-		}
-	}
+    :nth-child(even) {
+      grid-column-end: span 8;
+      justify-self: center;
+      text-align: center;
+    }
+  }
 }

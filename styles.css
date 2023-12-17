@@ -5,16 +5,19 @@
 }
 
 html {
-  overflow-wrap: anywhere;
   color: #0c1438;
+  overflow-wrap: anywhere;
 }
 
-body {
-  font-family: "Didot", serif;
+body,
+button {
   background-color: #f6f5f3;
+  color: #0c1438;
+  font-family: "Didot", serif;
 }
 
-main section, main div {
+main section,
+main div {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
@@ -32,15 +35,15 @@ main section, main div {
 
 header {
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 1em auto 0.5em;
-  padding: 0.5em 1em;
   border: 0;
-  border-top: 1px solid #0c1438;
   border-bottom: 1px solid #0c1438;
+  border-top: 1px solid #0c1438;
+  justify-content: center;
+  margin: 1em auto 0.5em;
   max-width: 80%;
   overscroll-behavior-x: contain;
+  padding: 0.5em 1em;
+  text-align: center;
 }
 
 main {
@@ -49,24 +52,24 @@ main {
 
 a,
 li {
-  text-decoration: none;
   color: #0c1438;
+  text-decoration: none;
 }
 
 .cardtainer {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1em;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   list-style: none;
-  padding: 1em;
   margin: 0 auto;
   max-width: 2000px;
+  padding: 1em;
 }
 .cardtainer .card {
-  grid-column-end: span 3;
+  border-bottom: 1px #0c1438 solid;
   border-radius: 1em;
   border-top: 1px #0c1438 solid;
-  border-bottom: 1px #0c1438 solid;
+  grid-column-end: span 3;
   padding: 0.5em;
 }
 
@@ -86,92 +89,104 @@ li {
   }
 }
 footer {
-  width: 80%;
-  margin: 0 auto;
   align-items: center;
-  justify-items: center;
   justify-content: center;
-  text-align: center;
+  justify-items: center;
+  margin: 0 auto;
   padding: 0 0 1em;
+  text-align: center;
+  width: 80%;
 }
 
 .tbaka {
   border: 0;
   border-bottom: 1px solid #0c1438;
-  padding: 0.15em 1em -0.25em;
   max-width: 10%;
+  padding: 0.15em 1em -0.25em;
 }
 
 table {
-  overflow-x: scroll;
-  max-width: 1440px;
   margin: 0 auto;
+  max-width: 1440px;
+  overflow-x: scroll;
   padding: 0 1em;
 }
 
+button {
+  border: 0;
+  border-bottom: 1px #0c1438 solid;
+  border-radius: 1em;
+  border-top: 1px #0c1438 solid;
+  padding: 0.25em 0.5em;
+}
+button :hover {
+  cursor: pointer;
+}
+
 .tafla {
+  border-bottom: 1px solid #0c1438;
   display: grid;
+  gap: 1em;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
-  gap: 1em;
   margin: 0 0 1em;
-  padding: 0.5em 0 1em;
-  border-bottom: 1px solid #0c1438;
   overflow-wrap: break-word;
+  padding: 0.5em 0 1em;
 }
-.tafla .row {
+
+.row {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   word-break: break-word;
 }
-.tafla .row :first-child {
+.row :first-child {
   grid-column-end: span 2;
   justify-self: center;
 }
-.tafla .row :last-child {
+.row :last-child {
   grid-column-end: span 2;
   justify-self: center;
 }
-.tafla .row :nth-child(2) {
+.row :nth-child(2) {
   grid-column-end: span 3;
 }
-.tafla .row :nth-child(3) {
+.row :nth-child(3) {
   grid-column-end: span 1;
   justify-self: center;
 }
-.tafla .row :nth-child(4) {
+.row :nth-child(4) {
   grid-column-end: span 2;
   justify-self: center;
 }
-.tafla .row :nth-child(5) {
+.row :nth-child(5) {
   grid-column-end: span 2;
 }
 
 .td a {
-  text-decoration-style: solid;
   text-decoration: underline;
+  text-decoration-style: solid;
 }
 
 @media (min-width: 316px) and (max-width: 800px) {
   .tafla {
     gap: 1.5em;
   }
-  .tafla .row :first-child {
+  .row :first-child {
     grid-column-end: span 3;
   }
-  .tafla .row :last-child {
+  .row :last-child {
     grid-column-end: span 3;
   }
-  .tafla .row :nth-child(2) {
+  .row :nth-child(2) {
     grid-column-end: span 6;
   }
-  .tafla .row :nth-child(3) {
+  .row :nth-child(3) {
     grid-column-end: span 3;
   }
-  .tafla .row :nth-child(4) {
+  .row :nth-child(4) {
     grid-column-end: span 3;
   }
-  .tafla .row :nth-child(5) {
+  .row :nth-child(5) {
     grid-column-end: span 6;
   }
 }
@@ -179,12 +194,12 @@ table {
   .tafla {
     gap: 1.5em;
   }
-  .tafla .row :nth-child(odd) {
+  .row :nth-child(odd) {
     grid-column-end: span 4;
     justify-self: center;
     text-align: center;
   }
-  .tafla .row :nth-child(even) {
+  .row :nth-child(even) {
     grid-column-end: span 8;
     justify-self: center;
     text-align: center;
