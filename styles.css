@@ -190,7 +190,7 @@ button :hover {
     grid-column-end: span 6;
   }
 }
-@media (min-width: 0) and (max-width: 400px) {
+@media (min-width: 201) and (max-width: 400px) {
   .tafla {
     gap: 1.5em;
   }
@@ -201,6 +201,13 @@ button :hover {
   }
   .row :nth-child(even) {
     grid-column-end: span 8;
+    justify-self: center;
+    text-align: center;
+  }
+}
+@media (min-width: 0) and (max-width: 200px) {
+  .row :nth-child(n) {
+    grid-column-end: span 12;
     justify-self: center;
     text-align: center;
   }

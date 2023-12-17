@@ -124,7 +124,7 @@ button {
   }
 }
 
-@media (min-width: 0) and (max-width: 400px) {
+@media (min-width: 201) and (max-width: 400px) {
   .tafla {
     gap: 1.5em;
   }
@@ -142,4 +142,15 @@ button {
       text-align: center;
     }
   }
+}
+
+@media (min-width: 0) and (max-width: 200px) {
+  .row {
+    :nth-child(n) {
+      grid-column-end: span 12;
+      justify-self: center;
+      text-align: center;
+    }
+  }
+
 }
