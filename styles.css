@@ -167,7 +167,7 @@ button :hover {
   text-decoration-style: solid;
 }
 
-@media (min-width: 316px) and (max-width: 800px) {
+@media (min-width: 400px) and (max-width: 800px) {
   .tafla {
     gap: 1.5em;
   }
@@ -190,7 +190,7 @@ button :hover {
     grid-column-end: span 6;
   }
 }
-@media (min-width: 0) and (max-width: 316px) {
+@media (min-width: 0) and (max-width: 400px) {
   .tafla {
     gap: 1.5em;
   }
