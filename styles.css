@@ -112,15 +112,22 @@ table {
   padding: 0 1em;
 }
 
+td a,
 button {
   border: 0;
   border-bottom: 1px #0c1438 solid;
   border-radius: 1em;
-  border-top: 1px #0c1438 solid;
   padding: 0.25em 0.5em;
 }
-button :hover {
+
+button {
+  border-top: 1px #0c1438 solid;
+}
+button:hover {
   cursor: pointer;
+}
+button h2 {
+  font-size: 1em;
 }
 
 .tafla {
